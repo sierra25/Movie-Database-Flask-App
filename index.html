@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="templates/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <title>Movie Database App</title>
+</head>
+
+
+<body>
+
+
+<div class="navbar navbar-expand-sm bg-dark navbar-dark" role="navigation">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" style="font-size: 2em;color: orange;" href="/" ><bold>Home - Sortable Movie Database</bold></a></li>
+
+            </ul>
+        </div>
+
+
+
+        <form action="./static/movies.json" method="POST">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" style="background-color: red;">
+                  Sort By
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:latest()">Latest</a></li>
+                  <li><a class="dropdown-item" href="javascript:oldest()">Oldest</a></li>
+                  <li><a class="dropdown-item" href="javascript:moviename()">Name</a></li>
+                </ul>
+            </div>
+            <br>
+            <div id="moviesbuttons"></div>
+            <button type="button" id="prev" class="btn btn-success" onclick="previouspage()" style="background-color: orange;">Prev</button>
+            <button type="button" id="next" class="btn btn-success" onclick="nextpage()" style="background-color: orange;">Next</button>
+
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!---
+<div class = "container search-container" style= "background-color:  rgb(23, 8, 231); height:150px;width:100%;">
+    <h1 style="text-align: center; background-color: rgb(23, 8, 231);color:#fff; font-size: 30px;">Welcome</h1>
+
+
+
+    <div id="container">
+        <div id="search">
+            <label for="searchInput">Search Movies: </label>
+            <input id="searchInput" type="text">
+        </div>
+    -->        
+<!--
+<form style="text-align: center;">
+ <div class="form-group">
+     <input type="text" id= "inputValue">
+ </div>
+ <button type="button" id="search" class="btn btn-success" onclick="searchList()">Search a movie</button>
+</form>
+
+</div>
+-->
+
+    <div class="container movie-list-container">
+
+
+
+
+
+
+
+
+
+        <div id= 'movies' class = 'movie-list'>
+
+                <div class="top-pad">
+
+
+                <span > </span>
+
+            </div>
+
+       </div>
+
+</div>
+<div style="align-content: center"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
